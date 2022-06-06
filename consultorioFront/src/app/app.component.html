@@ -1,41 +1,67 @@
-<div id="app">
-  <nav class="navbar navbar-expand navbar-dark bg-dark">
-    <a href="#" class="navbar-brand">bezKoder</a>
-    <ul class="navbar-nav mr-auto" routerLinkActive="active">
-      <li class="nav-item">
-        <a href="/home" class="nav-link" routerLink="home">Home </a>
-      </li>
-      <li class="nav-item" *ngIf="showAdminBoard">
-        <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
-      </li>
-      <li class="nav-item" *ngIf="showModeratorBoard">
-        <a href="/mod" class="nav-link" routerLink="mod">Moderator Board</a>
-      </li>
-      <li class="nav-item">
-        <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
-      </li>
-    </ul>
+<!--<div id="app">-->
+<!--  <nav class="navbar navbar-expand navbar-dark bg-dark">-->
+<!--    <a href="#" class="navbar-brand">bezKoder</a>-->
+<!--    <ul class="navbar-nav mr-auto" routerLinkActive="active">-->
+<!--      <li class="nav-item">-->
+<!--        <a href="/home" class="nav-link" routerLink="home">Home </a>-->
+<!--      </li>-->
+<!--      <li class="nav-item" *ngIf="showAdminBoard">-->
+<!--        <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>-->
+<!--      </li>-->
+<!--&lt;!&ndash;      <li class="nav-item" *ngIf="showModeratorBoard">&ndash;&gt;-->
+<!--&lt;!&ndash;        <a href="/mod" class="nav-link" routerLink="mod">Moderator Board</a>&ndash;&gt;-->
+<!--&lt;!&ndash;      </li>&ndash;&gt;-->
+<!--&lt;!&ndash;      <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;        <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>&ndash;&gt;-->
+<!--&lt;!&ndash;      </li>&ndash;&gt;-->
+<!--&lt;!&ndash;    </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">&ndash;&gt;-->
+<!--&lt;!&ndash;      <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;        <a href="/register" class="nav-link" routerLink="register">Sign Up</a>&ndash;&gt;-->
+<!--&lt;!&ndash;      </li>&ndash;&gt;-->
+<!--&lt;!&ndash;      <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;        <a href="/login" class="nav-link" routerLink="login">Login</a>&ndash;&gt;-->
+<!--&lt;!&ndash;      </li>&ndash;&gt;-->
+<!--&lt;!&ndash;    </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">&ndash;&gt;-->
+<!--&lt;!&ndash;      <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;        <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>&ndash;&gt;-->
+<!--&lt;!&ndash;      </li>&ndash;&gt;-->
+<!--      <li class="nav-item">-->
+<!--        <a href class="nav-link" (click)="logout()">LogOut</a>-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--  </nav>-->
+<!--  <div class="container">-->
+<!--    <router-outlet></router-outlet>-->
+<!--  </div>-->
+<!--</div>-->
 
-    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
-      <li class="nav-item">
-        <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
-      </li>
-      <li class="nav-item">
-        <a href="/login" class="nav-link" routerLink="login">Login</a>
-      </li>
-    </ul>
 
-    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
-      <li class="nav-item">
-        <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
-      </li>
-      <li class="nav-item">
-        <a href class="nav-link" (click)="logout()">LogOut</a>
-      </li>
-    </ul>
-  </nav>
 
+
+<!--<div class="menu">-->
+
+<!--  <div fxLayout="row" fxLayoutAlign="center" class="menuComponent">-->
+<!--    <button [matMenuTriggerFor]="menu1" mat-button>Médico</button>-->
+<!--    <mat-menu #menu1="matMenu">-->
+<!--      <button mat-menu-item [routerLink]="['/medicos']">Listagem de Médicos</button>-->
+<!--      <button mat-menu-item [routerLink]="['/cadastrarMedicos']">Cadastrar Médico</button>-->
+<!--    </mat-menu>-->
+<!--    <button [matMenuTriggerFor]="menu2" mat-button>Pacientes</button>-->
+<!--    <mat-menu #menu2="matMenu">-->
+<!--      <button mat-menu-item [routerLink]="['/pacientes']">Listagem de Pacientes</button>-->
+<!--      <button mat-menu-item [routerLink]="['/cadastrarPacientes']">Cadastrar Paciente</button>-->
+<!--    </mat-menu>-->
+<!--    <button [matMenuTriggerFor]="menu1" mat-button>Médico</button>-->
+<!--    <button mat-button [routerLink]="['/login']">Login</button>-->
+<!--    <button mat-button [routerLink]="['/consultas']">Consultas</button>-->
+<!--    <button mat-button [routerLink]="['/cadastrarConsultas']">Agendamento</button>-->
+<!--  </div>-->
+<!--  <div class="container">-->
+<!--    <router-outlet></router-outlet>-->
+<!--  </div>-->
+<!--</div>-->
   <div class="container">
     <router-outlet></router-outlet>
   </div>
-</div>

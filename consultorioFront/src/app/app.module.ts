@@ -20,6 +20,7 @@ import { BoardAdminComponent } from "./components/board-admin/board-admin.compon
 import { BoardModeratorComponent } from "./components/board-moderator/board-moderator.component";
 import { FormsModule } from '@angular/forms';
 import {authInterceptorProviders} from "./_helpers/auth.interceptor";
+import {MatMenuModule} from "@angular/material/menu";
 @NgModule({
   declarations: [
     AppComponent
@@ -38,6 +39,7 @@ import {authInterceptorProviders} from "./_helpers/auth.interceptor";
     PipesModule,
     MatSnackBarModule,
     FormsModule,
+    MatMenuModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
